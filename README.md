@@ -76,14 +76,19 @@ There are **two ways** to run the program:
 ✔ Provides a retry mechanism for incorrect input.  
 ✔ Asks if the user wants to restart the program.
 
-
 ## 🛠️ Technologies Used
 
 *   **Java 17**
 *   **Logger for logging**
 *   **Scanner for user input**
 
-### 🐛 Issue with Date Parsing
+## 📜 Logs  
+
+The application generates logs to track events and errors. All logs are stored in the `app.log` file, located in the project root directory.  
+Check this file for debugging or reviewing application activity.
+
+
+## 🐛 Issue with Date Parsing
 
 During testing the app, I found that Java's `LocalDate.parse()` method doesn't throw an exception for **29th February** on a non-leap year. Instead, it automatically adjusts the date to **28th February**.  
 This was handled by adding extra validation to ensure only valid dates are accepted.
