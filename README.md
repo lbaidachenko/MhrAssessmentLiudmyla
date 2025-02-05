@@ -167,5 +167,5 @@ Here are the test cases we used for the application:
 
 
 ### ✨ A Quick Note
-This project is my tech assessment for the **QA Automation Role** at **MHR**. Thank you for reviewing it! 😊
+This project is my tech assessment for the **QA Engineer / SDET** at **MHR**. Thank you for reviewing it! 😊
 
