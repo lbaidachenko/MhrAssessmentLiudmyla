@@ -39,3 +39,5 @@ build/
 
 app.log
 .idea*
+/out/
+
