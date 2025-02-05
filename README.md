@@ -4,18 +4,31 @@ This is a simple Java console application that calculates your age based on your
 
 ## 📥 Installation
 
-1. Ensure you have **Java 17+** installed.
+Ensure you have **Java 17+** installed.
 
    You can download it here:
    https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 
-
-2. Clone the repository using IntelliJ IDEA:
+### Cloning with IntelliJ IDEA
    - Open IntelliJ IDEA.
-   - Click "Get from VCS" (on the welcome screen) or go to File → New → Project from Version Control.
-   - Paste the repository URL and click Clone.
+   - Click "Get from VCS" (on the welcome screen) or go to **File → New → Project from Version Control**.
+   - Paste the repository URL and click **Clone**.
    - Open the project and wait for dependencies to load.
 
+### Cloning with PowerShell (Windows)
+   - Open **PowerShell** (`Win + X → Terminal` or `Win + R → powershell`).
+   - Run the following to clone the repository:
+
+     ```sh
+     git clone https://github.com/lbaidachenko/MhrAssessmentLiudmyla
+     ```
+### Cloning with macOS Terminal
+   - Open the **Terminal**. You can find it in **Applications → Utilities → Terminal**.
+   - Run the following to clone the repository:
+
+     ```sh
+     git clone https://github.com/lbaidachenko/MhrAssessmentLiudmyla
+     ```
  ## 🚀 How to Run  
 
 There are **two ways** to run the program:  
@@ -38,6 +51,10 @@ There are **two ways** to run the program:
    cd "C:\path\to\your\project"
    ```
     (Replace with your actual project path)
+3. Run the JAR file with:
+   ```sh
+   java -jar app.jar
+   ```
 
 ### **3️⃣ Using macOS Terminal**
 
@@ -48,6 +65,10 @@ There are **two ways** to run the program:
    cd /path/to/your/project
    ```
    (Replace with your actual project path)
+3. Run the JAR file with:
+   ```sh
+   java -jar app.jar
+   ```
 
 ## 🔄 Features
 
