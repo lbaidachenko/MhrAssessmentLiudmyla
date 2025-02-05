@@ -163,3 +163,9 @@ Here are the test cases we used for the application:
    - **Input:** `9999/12/31`
    - **Expected Output:**
      `You are not born yet but you know how to program`
+
+
+
+### ✨ A Quick Note
+This project is my tech assessment for the **QA Automation Role** at **MHR**. Thank you for reviewing it! 😊
+
