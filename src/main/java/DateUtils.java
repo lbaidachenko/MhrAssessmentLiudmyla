@@ -9,27 +9,24 @@ public class DateUtils {
     private static final Logger logger = LoggerUtil.getLogger();
 
     public static LocalDate inputDateOfBirthOrRetry(Scanner scanner, int maxRetryAttempts) {
-        int actualInputAttempts = 0;
-        while (actualInputAttempts < maxRetryAttempts) {
+        int attemptsLeft = maxRetryAttempts;
+        while (attemptsLeft > 0) {
             String dateOfBirthInput = scanner.nextLine();
             logger.info("User entered date: " + dateOfBirthInput); // Log input attempt
 
             LocalDate dateOfBirth = getValidatedDateOfBirth(dateOfBirthInput);
             if (dateOfBirth == null) {
-                actualInputAttempts++;
+                attemptsLeft--;
 
-                int attemptsLeft = maxRetryAttempts - actualInputAttempts;
-                if (attemptsLeft <= 0) {
-                    logAndPrint("Too many invalid attempts. Please try again later.");
-                    return null;
+                if (attemptsLeft > 0) {
+                    logAndPrint("Invalid format, try again, use YYYY/MM/DD format, you have " + attemptsLeft + " attempts left.");
                 }
-
-                logAndPrint("Invalid format, try again, use YYYY/MM/DD format, you have " + attemptsLeft + " attempts left.");
             } else {
                 return dateOfBirth;
             }
         }
 
+        logAndPrint("Too many invalid attempts.");
         return null;
     }
 
@@ -75,5 +72,28 @@ public class DateUtils {
     private static void logAndPrint(String message) {
         System.out.println(message);
         logger.info(message);  // Logs to file, not terminal
+    }
+
+    public static boolean wantToRestart(Scanner scanner, int maxRetryAttempts) {
+        int attemptsLeft = maxRetryAttempts;
+
+        while (attemptsLeft > 0) {
+            logAndPrint("Do you want to run the program again? (yes/no):");
+            String input = scanner.nextLine().trim().toLowerCase();
+
+            if (input.equals("yes")) {
+                return true;
+            } else if (input.equals("no")) {
+                return false;
+            } else {
+                attemptsLeft--;
+
+                if (attemptsLeft > 0)
+                    logAndPrint("Invalid input. Please enter 'yes' or 'no', you have " + attemptsLeft + " attempts left.");
+            }
+        }
+
+        logAndPrint("Sorry, I only asked for a yes or no. I can't take it anymore. :(");
+        return false;
     }
 }

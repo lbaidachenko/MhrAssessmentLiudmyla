@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class LoggerUtil {
-    private static final Logger logger = Logger.getLogger("DateUtils");
+    private static final Logger logger = Logger.getLogger("DateCheckLogs");
 
     static {
         try {
