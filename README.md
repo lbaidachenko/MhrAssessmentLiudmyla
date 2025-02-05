@@ -13,7 +13,6 @@ Ensure you have **Java 17+** installed.
    - Open IntelliJ IDEA.
    - Click "Get from VCS" (on the welcome screen) or go to **File → New → Project from Version Control**.
    - Paste the repository URL and click **Clone**.
-   - Open the project and wait for dependencies to load.
 
 ### Cloning with PowerShell (Windows)
    - Open **PowerShell** (`Win + X → Terminal` or `Win + R → powershell`).
